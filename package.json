@@ -5,7 +5,9 @@
   "scripts": {
     "build": "./scripts/build.sh",
     "clean": "./scripts/clean.sh",
-    "dev": "./scripts/dev.sh"
+    "dev": "./scripts/dev.sh",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "ts": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,66 @@
   "author": "Wes Souza <hey@wes.dev>",
   "license": "MIT",
   "homepage": "https://wes.dev/",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "fast-deep-equal-ts": "^3.1.1",
+    "html-entities": "^1.2.1",
+    "immer": "^5.3.6",
+    "ky": "^0.18.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-nl2br": "^0.6.0",
+    "ts-node": "^8.6.2",
+    "twitter-lite": "^0.9.4",
+    "twitter-text": "^3.0.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@now/node": "^1.4.1",
+    "@parcel/transformer-typescript-tsc": "^2.0.0-beta.1",
+    "@types/html-entities": "^1.2.16",
+    "@types/luxon": "^1.21.0",
+    "@types/node": "^13.7.7",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "@welldone-software/why-did-you-render": "^4.0.5",
+    "csstype": "^2.6.9",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "import-sort-style-wes": "^3.0.0",
+    "instagram-private-api": "^1.39.1",
+    "parcel": "^2.0.0-beta.1",
+    "prettier": "^1.19.1",
+    "prettier-plugin-import-sort": "^0.0.3"
+  },
+  "browserslist": [
+    "last 2 and_chr versions",
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 2 ios_saf versions",
+    "last 2 safari versions"
+  ],
+  "htmlnano": {
+    "minifySvg": false
+  },
+  "importSort": {
+    ".js, .jsx": {
+      "parser": "babylon",
+      "style": "wes"
+    },
+    ".ts, .tsx": {
+      "parser": "typescript",
+      "style": "wes"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
 }
